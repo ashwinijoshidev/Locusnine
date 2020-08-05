@@ -1,0 +1,16 @@
+<table class="table table-hover">
+      <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ROLE TYPE</th>
+        <th>STATUS</th>
+        <th>ACTION</th>
+      </tr>
+      <tr *ngFor="let user of service.list"> 
+      <td (click)="populateForm(user)">[{{user.Name}}]-{{user.Name}}</td>
+      <td (click)="populateForm(user)">{{user.Email}}</td>
+      <td (click)="populateForm(user)">{{user.RoleType}}</td>
+      <td (click)="populateForm(user)">{{user.Status}}</td>
+      <td><button (click)="onDelete(user.UserID)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+  </table>
